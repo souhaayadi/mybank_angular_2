@@ -91,7 +91,7 @@
       <!-- Navigation -->
       <ul class="navbar-nav">
         <div *ngFor="let menuItem of menuItems">
-          <li class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute!='manageClients'" >
+          <li class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute!='manageClients' && menuItem.typeRoute!='operations' && menuItem.typeRoute!='profiles' && menuItem.typeRoute!='accounts'" >
 
               <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link" >
                   <i class="ni {{menuItem.icon}}"></i>
@@ -100,7 +100,7 @@
           </li>
           <li  class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute=='manageClients'">
 
-            <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link" (click)="clickManageClient($event)" >
+            <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link" (click)="clickManage($event,'clients')" >
               <i class="ni {{menuItem.icon}}"></i>
               {{menuItem.title}}
             </a>
@@ -114,6 +114,49 @@
               </a>
             </div>
           </li>
+          <li  class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute=='accounts'">
+
+            <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link" (click)="clickManage($event,'accounts')" >
+              <i class="ni {{menuItem.icon}}"></i>
+              {{menuItem.title}}
+            </a>
+            <div *ngIf="openAccountsSubMenu">
+
+              <a routerLinkActive="active" [routerLink]="['/manageAccounts']" class="nav-link" style="margin-left: 22%;">
+
+                {{'Manage accounts'}}
+              </a>
+            </div>
+          </li>
+          <li  class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute=='operations'">
+
+            <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link" (click)="clickManage($event,'operations')" >
+              <i class="ni {{menuItem.icon}}"></i>
+              {{menuItem.title}}
+            </a>
+            <div *ngIf="openOperationsSubMenu">
+              <a routerLinkActive="active" [routerLink]="['/transaction']" class="nav-link" style="margin-left: 22%;">
+                {{'Transaction'}}
+              </a>
+              <a routerLinkActive="active" [routerLink]="['/virement']" class="nav-link" style="margin-left: 22%;">
+
+                {{'Transfer'}}
+              </a>
+              <a routerLinkActive="active" [routerLink]="['/versement']" class="nav-link" style="margin-left: 22%;">
+
+                {{'payment'}}
+              </a>
+            </div>
+          </li>
+          <li  class="{{menuItem.class}} nav-item" *ngIf="menuItem.typeRoute=='profiles'">
+
+            <a routerLinkActive="active" [routerLink]="['/profiles']" class="nav-link" >
+              <i class="ni {{menuItem.icon}}"></i>
+              {{menuItem.title}}
+            </a>
+
+          </li>
+
         </div>
 
 

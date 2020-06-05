@@ -6,6 +6,7 @@ import {AddClientComponent} from './add-client/add-client.component';
 import {AddClientService} from './add-client.service';
 import {CalendarModule, ChartModule, CheckboxModule, DropdownModule, SelectButtonModule} from 'primeng';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ManageClientComponent} from './manage-clients/manage-client.component';
 
 
 @NgModule({
@@ -17,11 +18,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     FormsModule,DropdownModule, CalendarModule , ReactiveFormsModule, CheckboxModule, SelectButtonModule,ChartModule
   ],
   declarations: [
-    AddClientComponent
+    AddClientComponent,
+    ManageClientComponent
   ],
   exports: [
     AddClientComponent
   ],
   providers:[AddClientService]
 })
-export class AddClientModule { }
+export class ClientModule { }

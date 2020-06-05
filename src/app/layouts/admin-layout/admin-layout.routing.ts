@@ -6,6 +6,7 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import {AddClientComponent} from '../../components/ManageClient/add-client/add-client.component';
+import {ManageClientComponent} from '../../components/ManageClient/manage-clients/manage-client.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -13,6 +14,9 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'tables',         component: TablesComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
-    { path: 'addClient',           component:AddClientComponent  }
+    { path: 'addClient',           component:AddClientComponent  },
+    { path: 'manageClients',           component:ManageClientComponent  }
+
+
 
 ];
