@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { Router } from '@angular/router';
 
 declare interface RouteInfo {
@@ -41,7 +41,7 @@ export class SidebarComponent implements OnInit {
   private countAcc: any=0;
   private countOp: any=0;
 
-
+  @Output() menuType = new EventEmitter<any>();
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -86,6 +86,9 @@ export class SidebarComponent implements OnInit {
       }
     }
   }
+  clickProfiles(event:any){
+    this.menuType.emit("profiles");
 
+  }
 
 }

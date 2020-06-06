@@ -1,8 +1,8 @@
 <!-- Sidenav -->
-<app-sidebar></app-sidebar>
+<app-sidebar (menuType)="menuTypeChange($event)"></app-sidebar>
 <div class="main-content">
   <!-- Top navbar -->
-  <app-navbar></app-navbar>
+  <app-navbar [menuType]="menuType"></app-navbar>
   <!-- Pages -->
   <router-outlet></router-outlet>
   <div class="container-fluid">

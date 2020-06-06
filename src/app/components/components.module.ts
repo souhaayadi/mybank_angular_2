@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ClientModule} from './ManageClient/client.module';
+import {AccountsModule} from './Accounts/accounts.module';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import {ClientModule} from './ManageClient/client.module';
     CommonModule,
     RouterModule,
     NgbModule,
-    ClientModule
+    ClientModule,AccountsModule
 
   ],
   declarations: [

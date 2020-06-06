@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class AdminLayoutComponent implements OnInit {
 
   constructor() { }
-
+  menuType:string="";
   ngOnInit() {
   }
-
+  menuTypeChange(event:any){
+    this.menuType=event;
+  }
 }

@@ -6,7 +6,7 @@ import {Client} from './client-model';
 import {Service} from '../../common/service';
 
 @Injectable()
-export class AddClientService extends Service {
+export class ClientService extends Service {
   /**
    * Creates a new NameListService with the injected Http.
    * @param {Http} http - The injected Http.

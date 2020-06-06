@@ -7,6 +7,8 @@ import { UserProfileComponent } from '../../pages/user-profile/user-profile.comp
 import { TablesComponent } from '../../pages/tables/tables.component';
 import {AddClientComponent} from '../../components/ManageClient/add-client/add-client.component';
 import {ManageClientComponent} from '../../components/ManageClient/manage-clients/manage-client.component';
+import {ManageAccountsComponent} from '../../components/Accounts/manage-accounts/manage-accounts.component';
+import {ProfilesComponent} from '../../components/ManageClient/profiles/profiles.component';
 
 export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
@@ -15,7 +17,10 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
     { path: 'addClient',           component:AddClientComponent  },
-    { path: 'manageClients',           component:ManageClientComponent  }
+    { path: 'manageClients',           component:ManageClientComponent  },
+  { path: 'manageAccounts',           component:ManageAccountsComponent  },
+  { path: 'profiles',           component:ProfilesComponent  },
+
 
 
 
