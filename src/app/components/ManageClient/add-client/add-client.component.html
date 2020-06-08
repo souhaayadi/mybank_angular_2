@@ -57,7 +57,7 @@
               </div>
             </div>
             <hr class="my-4" />
-            <!-- Address -->
+            <!-- address -->
             <h6 class="heading-small text-muted mb-4">Contact information</h6>
             <div class="pl-lg-4">
               <div class="row">
@@ -69,8 +69,8 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="form-control-label" for="input-address">Address</label>
-                    <input id="input-address" class="form-control form-control-alternative" name="sss5" placeholder="Home Address"  type="text" [(ngModel)]="client.adress.principalAdress">
+                    <label class="form-control-label" for="input-address">address</label>
+                    <input id="input-address" class="form-control form-control-alternative" name="sss5" placeholder="Home address"  type="text" [(ngModel)]="client.address.principalAdress">
                   </div>
                 </div>
 
@@ -79,30 +79,71 @@
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label" for="input-city">City</label>
-                    <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" [(ngModel)]="client.adress.city" name="city">
+                    <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" [(ngModel)]="client.address.city" name="city">
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label" for="input-country">Country</label>
-                    <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" [(ngModel)]="client.adress.country" name="country">
+                    <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" [(ngModel)]="client.address.country" name="country">
                   </div>
                 </div>
                 <div class="col-lg-4">
                   <div class="form-group">
                     <label class="form-control-label" for="input-country">Postal code</label>
-                    <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code" [(ngModel)]="client.adress.postalCode" name="postalCode">
+                    <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code" [(ngModel)]="client.address.postalCode" name="postalCode">
                   </div>
                 </div>
               </div>
             </div>
             <hr class="my-4" />
+
+
+            <!-- address -->
+            <h6 class="heading-small text-muted mb-4">Acount informations</h6>
+            <div class="pl-lg-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-address">Code</label>
+                    <input  class="form-control form-control-alternative" placeholder="Code" name="code" [(ngModel)]="account.codeClient" type="number" >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-address">Creation Date</label>
+                    <input class="form-control form-control-alternative" name="creationDate" [(ngModel)]="account.dateCreation" type="date">
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" for="input-city">balance</label>
+                    <input type="text"  class="form-control form-control-alternative" placeholder="balance" [(ngModel)]="account.solde" name="balance">
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div >
+                    <label class="form-control-label" >Account type</label>
+                    <div>
+                      <p-dropdown [options]="cptTypeList" name="typeCpt"
+                                  [(ngModel)]="account.typeCpt"
+                      ></p-dropdown>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <hr class="my-4" />
             <!-- Description -->
-            <h6 class="heading-small text-muted mb-4">Commentaire</h6>
+            <h6 class="heading-small text-muted mb-4">Comment</h6>
             <div class="pl-lg-4">
               <div class="form-group">
-                <label>About Me</label>
-                <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words  ..." name="comment" [(ngModel)]="client.comment">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
+                <label>Comment</label>
+                <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words ..." name="comment" [(ngModel)]="client.comment">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
               </div>
             </div>
           </form>

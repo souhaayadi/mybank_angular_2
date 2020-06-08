@@ -1,12 +1,15 @@
+import {Compte} from '../Accounts/accounts-model';
+
 export class Client {
    code: any;
    nom: string ;
    prenom: string;
    dateNaiss: any;
    email: string;
-   adress: Adress;
+  address: any;
    sexe:string;
-  comment:string;
+   comment:string;
+  comptes:Compte[];
 
 }
 export class Adress {
