@@ -6,7 +6,7 @@ export class Client {
    prenom: string;
    dateNaiss: any;
    email: string;
-  address: any;
+  address: Adress;
    sexe:string;
    comment:string;
   comptes:Compte[];
@@ -17,5 +17,5 @@ export class Adress {
   country: string;
   city: string;
   principalAdress: string;
-  code_adresse: string;
+
 }

@@ -1,5 +1,5 @@
 export class Compte {
-   codeCompte: string;
+   codeCompte: number;
    dateCreation: Date;
    solde: any;
    decouvert: any;
