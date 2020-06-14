@@ -33,5 +33,8 @@ export class NavbarComponent implements OnInit {
     }
     return 'Dashboard';
   }
-
+  logout(event:any){
+    this.router.navigate(['/login']);
+    localStorage.clear();
+  }
 }

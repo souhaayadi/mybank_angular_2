@@ -13,6 +13,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import {CalendarModule, ChartModule, CheckboxModule, DropdownModule, SelectButtonModule} from 'primeng';
+import {CommonModule} from '@angular/common';
+import {AuthGuard} from './authGuard.service';
+import {ToastrModule} from 'ngx-toastr';
+
+
 
 
 @NgModule({
@@ -23,15 +28,15 @@ import {CalendarModule, ChartModule, CheckboxModule, DropdownModule, SelectButto
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule,DropdownModule,
-    FormsModule,DropdownModule, CalendarModule , ReactiveFormsModule, CheckboxModule, SelectButtonModule,ChartModule
+    AppRoutingModule,DropdownModule,CommonModule,
+    FormsModule,DropdownModule, CalendarModule , ReactiveFormsModule, CheckboxModule, SelectButtonModule,ChartModule,ToastrModule.forRoot()
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

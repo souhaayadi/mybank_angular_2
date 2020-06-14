@@ -301,7 +301,7 @@ export const chartExample1 = {
   data: {
     labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{
-      label: 'Performance',
+      label: 'Exchange rate',
       data: [0, 20, 10, 30, 15, 40, 20, 60, 60]
     }]
   }
@@ -340,6 +340,15 @@ export const chartExample2 = {
   },
   data: {
     labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: [
+      {
+        label: "Sales",
+        data: [25, 20, 30, 22, 17, 29]
+      }
+    ]
+  },
+  data1: {
+    labels: ["Monday", "Tuesday", "thursday", "friday", "saturday", "sunday"],
     datasets: [
       {
         label: "Sales",

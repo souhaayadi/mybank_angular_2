@@ -11,11 +11,13 @@ export class Client {
    comment:string;
   comptes:Compte[];
 
+
 }
 export class Adress {
   postalCode: string;
   country: string;
   city: string;
   principalAdress: string;
+  phoneNumber:string;
 
 }

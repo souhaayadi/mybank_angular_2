@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ClientModule} from './ManageClient/client.module';
 import {AccountsModule} from './Accounts/accounts.module';
+import {OperationsModule} from './operations/operations-module';
+
+
 
 
 @NgModule({
@@ -14,7 +17,7 @@ import {AccountsModule} from './Accounts/accounts.module';
     CommonModule,
     RouterModule,
     NgbModule,
-    ClientModule,AccountsModule
+    ClientModule,AccountsModule,OperationsModule
 
   ],
   declarations: [

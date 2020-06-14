@@ -12,7 +12,7 @@ export class ClientService {
   getClients(): Observable<any>{
     return this.http.get<any> ('http://localhost:8080/clients');
   }
-  getClientss( motCle: string, page: number, size: number): Observable<any> {
+  getClientByName( motCle: string, page: number, size: number): Observable<any> {
     return this.http.get<any> ('http://localhost:8080/clients/listClient?mc=' + motCle + '&size=' + size + '&page=' + page);
   }
 

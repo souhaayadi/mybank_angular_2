@@ -9,17 +9,20 @@ declare interface RouteInfo {
     typeRoute?: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '',typeRoute: 'parent' },
+    { path: '/dashboard', title: 'Dashboard',  icon: 'ni-tv-2 text-primary', class: '',typeRoute: 'dashboard' },
     { path: '/manageClients', title: 'Clients',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: 'manageClients'} ,
+   { path: '/addClient', title: 'Add client',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: ''} ,
     { path: '/accounts', title: 'Accounts',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: 'accounts'} ,
+  { path: '/manageAccounts', title: 'View Accounts ',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: ''} ,
     { path: '/operations', title: 'Operations',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: 'operations'} ,
-    { path: '/profiles', title: 'Profiles',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: 'profiles'} ,
+    { path: '/profiles', title: 'Profiles',  icon: 'ni-single-02 text-yellow', class: '', typeRoute: 'profiles'},
+
    /* { path: '/icons', title: 'Icons',  icon: 'ni-planet text-blue', class: '',typeRoute: 'parent' },*/
     { path: '/maps', title: 'Maps',  icon: 'ni-pin-3 text-orange', class: '' },
     { path: '/user-profile', title: 'User profile',  icon: 'ni-single-02 text-yellow', class: '' },
     { path: '/tables', title: 'Tables',  icon: 'ni-bullet-list-67 text-red', class: '' },
-   /* { path: '/login', title: 'Login',  icon: 'ni-key-25 text-info', class: '' },
-    { path: '/register', title: 'Register',  icon: 'ni-circle-08 text-pink', class: '' },*/
+    { path: '/login', title: 'Login',  icon: 'ni-key-25 text-info', class: '' },
+    { path: '/register', title: 'Register',  icon: 'ni-circle-08 text-pink', class: '' }
 
 
 
@@ -61,7 +64,7 @@ export class SidebarComponent implements OnInit {
         this.countClt=this.countClt+1;
       }
     }
-    else{
+
       if(typeMenu=='operations'){
         if((this.countOp %2) ==0){
           this.openOperationsSubMenu=true;
@@ -72,8 +75,8 @@ export class SidebarComponent implements OnInit {
           this.countOp=this.countAcc+1;
         }
       }
-      else{
-        if(typeMenu=='accounts'){
+
+      if(typeMenu=='accounts'){
           if((this.countAcc %2) ==0){
             this.openAccountsSubMenu=true;
             this.countAcc++;
@@ -83,8 +86,8 @@ export class SidebarComponent implements OnInit {
             this.countAcc=this.countAcc+1;
           }
         }
-      }
-    }
+
+
   }
   clickProfiles(event:any){
     this.menuType.emit("profiles");

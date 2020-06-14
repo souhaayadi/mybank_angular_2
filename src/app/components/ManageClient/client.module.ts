@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {AddClientComponent} from './add-client/add-client.component';
-import {CalendarModule, ChartModule, CheckboxModule, DropdownModule, SelectButtonModule} from 'primeng';
+import {CalendarModule, ChartModule, CheckboxModule, DropdownModule, SelectButtonModule, TableModule} from 'primeng';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ManageClientComponent} from './manage-clients/manage-client.component';
 import {ClientService} from './client.service';
@@ -16,7 +16,7 @@ import {ProfilesComponent} from './profiles/profiles.component';
     RouterModule,
     NgbModule,
     DropdownModule,
-    FormsModule,DropdownModule, CalendarModule , ReactiveFormsModule, CheckboxModule, SelectButtonModule,ChartModule
+    FormsModule,DropdownModule, CalendarModule , ReactiveFormsModule, CheckboxModule, SelectButtonModule,ChartModule,TableModule
   ],
   declarations: [
     AddClientComponent,
@@ -24,7 +24,7 @@ import {ProfilesComponent} from './profiles/profiles.component';
     ProfilesComponent
   ],
   exports: [
-    AddClientComponent
+    AddClientComponent,ManageClientComponent
   ],
   providers:[ClientService]
 })

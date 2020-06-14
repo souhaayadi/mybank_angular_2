@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Service} from '../../common/service';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
 @Injectable()
@@ -18,9 +18,12 @@ export class AccountsService extends Service {
   getCompte(codeCompte: any): Observable<any> {
     return this.http.get<any>('http://localhost:8080/comptes/' + codeCompte);
   }
-
-  verser(codeCompte, montant: any): Observable<any> {
+  getAllAccounts(): Observable<any> {
+    return this.http.get<any>('http://localhost:8080/comptes');
+  }
+  verser(codeCompte:any, montant: any): Observable<any> {
     // @ts-ignore
+
     return this.http.put<any>('http://localhost:8080/comptes/verser/' + codeCompte + '&' + montant );
   }
 
@@ -33,5 +36,7 @@ export class AccountsService extends Service {
     // @ts-ignore
     return this.http.put<any>('http://localhost:8080/comptes/virement/' + codeCompte1 + '&' + codeCompte2 + '&' + montant);
   }
-
+  deleteAccount( codeCompte: any): Observable<any> {
+    return this.http.delete<any>('http://localhost:8080/comptes/' + codeCompte);
+  }
 }
